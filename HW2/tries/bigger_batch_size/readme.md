@@ -1,0 +1,2 @@
+In this run, I kept the changes from the Adam try because it gave me a slightly better result than the baseline submission, and I also changed the batch size of the training dataloader to be bigger (2000 vs 64).
+The results were not that good, only 53.42 for the validation accuracy.
