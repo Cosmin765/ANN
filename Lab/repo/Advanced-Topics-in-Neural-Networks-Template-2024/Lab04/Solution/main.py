@@ -5,7 +5,8 @@ import torch.utils.data
 from my_model import ImageTransformationPredictor
 
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+# device = 'cuda'
+device = 'cpu'
 torch.set_default_device(device)
 
 
