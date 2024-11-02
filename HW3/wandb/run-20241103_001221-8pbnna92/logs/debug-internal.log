@@ -1,0 +1,16 @@
+{"time":"2024-11-03T00:12:21.7251865+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T00:12:21.7251865+02:00","level":"INFO","msg":"created symlink","path":"D:\\Facultate\\Master\\ANN\\HW3\\wandb\\run-20241103_001221-8pbnna92\\logs\\debug-core.log"}
+{"time":"2024-11-03T00:12:21.8878164+02:00","level":"INFO","msg":"created new stream","id":"8pbnna92"}
+{"time":"2024-11-03T00:12:21.888414+02:00","level":"INFO","msg":"stream: started","id":"8pbnna92"}
+{"time":"2024-11-03T00:12:21.888414+02:00","level":"INFO","msg":"sender: started","stream_id":"8pbnna92"}
+{"time":"2024-11-03T00:12:21.888414+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"8pbnna92"}}
+{"time":"2024-11-03T00:12:21.888414+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"8pbnna92"}}
+{"time":"2024-11-03T00:12:22.3156994+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T00:17:35.7728996+02:00","level":"INFO","msg":"stream: closing","id":"8pbnna92"}
+{"time":"2024-11-03T00:17:35.773429+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T00:17:35.773957+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T00:17:38.5102076+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T00:17:38.7775521+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"8pbnna92"}}
+{"time":"2024-11-03T00:17:38.7775521+02:00","level":"INFO","msg":"sender: closed","stream_id":"8pbnna92"}
+{"time":"2024-11-03T00:17:38.7775521+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"8pbnna92"}}
+{"time":"2024-11-03T00:17:38.7824667+02:00","level":"INFO","msg":"stream: closed","id":"8pbnna92"}

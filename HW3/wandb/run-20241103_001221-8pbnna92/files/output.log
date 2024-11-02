@@ -1,0 +1,18 @@
+Loss decreased - 2.35161 - saving the model
+Train: 11.15, Val: 10.66, Best: 10.66
+Train: 10.93, Val: 10.97, Best: 10.97
+Traceback (most recent call last):
+  File "D:\Facultate\Master\ANN\HW3\main.py", line 212, in <module>
+  File "D:\Facultate\Master\ANN\HW3\main.py", line 197, in main
+    best = 0.0
+
+  File "D:\Facultate\Master\ANN\HW3\main.py", line 36, in train
+    scaler.scale(loss).backward()
+  File "D:\Facultate\Master\ANN\venv\Lib\site-packages\torch\_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "D:\Facultate\Master\ANN\venv\Lib\site-packages\torch\autograd\__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "D:\Facultate\Master\ANN\venv\Lib\site-packages\torch\autograd\graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

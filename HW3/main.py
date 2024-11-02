@@ -7,6 +7,7 @@ import torch.nn as nn
 from torchvision.transforms import v2
 from torch.utils.data import DataLoader
 import wandb
+from augmentations import augmentations
 import argparse
 from early_stopping import EarlyStopping
 
@@ -107,6 +108,8 @@ def main():
     parser.add_argument('--sgd-use-nesterov', action='store_true', default=False)
     parser.add_argument('--sgd-weight-decay', type=float, default=0)
 
+    parser.add_argument('--augmentations', default='basic', choices=augmentations.keys())
+
     cifar_models = ['resnet18_cifar10', 'pre_act_resnet18']
     mnist_models = ['mlp', 'le_net']
     parser.add_argument('-m', '--model', choices=cifar_models + mnist_models, required=True)
@@ -129,17 +132,22 @@ def main():
             model = pre_act_resnet18.PreActResNet18_C10(num_classes)
         case 'mlp':
             from torchvision.ops import MLP
+            # TODO: implement and test everything
             raise NotImplementedError
         case 'le_net':
             raise NotImplementedError
         case _:
             raise Exception('Got an unexpected model name: {}'.format(args.model))
 
+    chosen_augmentations = augmentations[args.augmentations]
     basic_transforms = v2.Compose([
+        chosen_augmentations(),
         v2.ToImage(),
         v2.ToDtype(torch.float32, scale=True),
-        v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True)
+        v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True),
     ])
+
+    # TODO: caching component
     train_set = datasets_mapping[args.dataset](dataset_path, download=True, train=True, transform=basic_transforms)
     test_set = datasets_mapping[args.dataset](dataset_path, download=True, train=False, transform=basic_transforms)
 
