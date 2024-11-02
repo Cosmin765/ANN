@@ -1,0 +1,38 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "3.11.2",
+  "startedAt": "2024-11-02T21:57:00.961130Z",
+  "args": [
+    "-d",
+    "cifar10",
+    "-m",
+    "resnet18_cifar10"
+  ],
+  "program": "D:\\Facultate\\Master\\ANN\\HW3\\main.py",
+  "codePath": "HW3\\main.py",
+  "git": {
+    "remote": "https://github.com/Cosmin765/ANN.git",
+    "commit": "dd1c6bb817405c2ee311302afb1a8f6669e20a26"
+  },
+  "email": "cosminturtureanu1234@gmail.com",
+  "root": "D:\\Facultate\\Master\\ANN\\HW3",
+  "host": "cturtureanu-l",
+  "username": "cturtureanu",
+  "executable": "D:\\Facultate\\Master\\ANN\\venv\\Scripts\\python.exe",
+  "codePathLocal": "main.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "disk": {
+    "/": {
+      "total": "512092008448",
+      "used": "139567546368"
+    }
+  },
+  "memory": {
+    "total": "16889163776"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  }
+}
