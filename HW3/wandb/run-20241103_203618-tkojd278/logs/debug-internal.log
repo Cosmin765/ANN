@@ -1,0 +1,8 @@
+{"time":"2024-11-03T20:36:18.7662848+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T20:36:18.7668115+02:00","level":"INFO","msg":"created symlink","path":"D:\\Facultate\\Master\\ANN\\HW3\\wandb\\run-20241103_203618-tkojd278\\logs\\debug-core.log"}
+{"time":"2024-11-03T20:36:18.9676267+02:00","level":"INFO","msg":"created new stream","id":"tkojd278"}
+{"time":"2024-11-03T20:36:18.9676267+02:00","level":"INFO","msg":"stream: started","id":"tkojd278"}
+{"time":"2024-11-03T20:36:18.9676267+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"tkojd278"}}
+{"time":"2024-11-03T20:36:18.9681299+02:00","level":"INFO","msg":"sender: started","stream_id":"tkojd278"}
+{"time":"2024-11-03T20:36:18.9676267+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tkojd278"}}
+{"time":"2024-11-03T20:36:19.5697047+02:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,5 +1,7 @@
-import os.path
+from augmentations import augmentations
+from early_stopping import EarlyStopping
 
+import os.path
 import torch
 from torchvision.datasets import CIFAR10, CIFAR100, MNIST
 from torch import optim
@@ -7,9 +9,7 @@ import torch.nn as nn
 from torchvision.transforms import v2
 from torch.utils.data import DataLoader
 import wandb
-from augmentations import augmentations
 import argparse
-from early_stopping import EarlyStopping
 
 DATASET_PATH = './dataset'
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
@@ -131,11 +131,11 @@ def main():
             num_classes = 10 if args.dataset == 'cifar10' else 100
             model = pre_act_resnet18.PreActResNet18_C10(num_classes)
         case 'mlp':
-            from torchvision.ops import MLP
-            # TODO: implement and test everything
-            raise NotImplementedError
+            from models.my_mlp import MNIST_MLP
+            model = MNIST_MLP()
         case 'le_net':
-            raise NotImplementedError
+            from models.le_net import LeNet
+            model = LeNet()
         case _:
             raise Exception('Got an unexpected model name: {}'.format(args.model))
 
@@ -147,7 +147,6 @@ def main():
         v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True),
     ])
 
-    # TODO: caching component
     train_set = datasets_mapping[args.dataset](dataset_path, download=True, train=True, transform=basic_transforms)
     test_set = datasets_mapping[args.dataset](dataset_path, download=True, train=False, transform=basic_transforms)
 
